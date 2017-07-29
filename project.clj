@@ -9,23 +9,8 @@
 
   :source-paths ["src" "scripts"]
 
-  :plugins [[lein-cljsbuild "1.1.6"]]
-
   :clean-targets ^{:protect false} ["resources/public/js/"
                                     "node_modules"
-                                    "target"]
-
-  :cljsbuild {:builds [{:id           "dev"
-                        :source-paths ["src"]
-                        :compiler     {:main "cljs-tests-npm.core"
-                                       :asset-path "js/out"
-                                       :output-to "resources/public/js/main.js"
-                                       :output-dir "resources/public/js/out"
-                                       :parallel-build true
-                                       :verbose true
-                                       :optimizations :none
-                                       :language-in :ecmascript6
-                                       :npm-deps {:material-components-web "0.15.0"}
-                                       :install-deps true}}]})
+                                    "target"])
 
 
